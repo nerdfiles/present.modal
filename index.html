@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+
+<title>The Dark Side in a pure CSS Lightbox</title>
+
+<style>
+
+body { 
+	background: #000 url(win95-screensaver-ftw.gif); 
+	font: 1em Helvetica, Arial, sans-serif; 
+	color: #FFEF3F; }
+
+a { color: #CBC2AC; }
+
+a:hover { color: #FFEF3F; }
+
+ul { 
+	overflow: hidden; 
+	list-style: none; }
+
+ul li { float: left; }
+
+ul li img { 
+	width: 150px; 
+	border: 3px #666 solid; 
+	margin: 0 1em 0 0; }
+
+.overlay { 
+	background: #000 url(win95-screensaver-ftw.gif); 
+	rgba(0,0,0,0.7); 
+	display: none; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	height: 100%; 
+	width: 100%; }
+
+.overlay a { 
+	display: table-cell; 
+	vertical-align: middle; 
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	outline: none;
+	border: none; }
+
+.overlay img {
+	height: 400px;
+	border: 3px #999 solid; }
+
+.overlay:target { 
+	display: table; }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+<h1>Pure CSS Lightbox</h1>
+<p>Don't try this in IE, kids. Original idea: <a href="http://www.thecssninja.com/xhtml/futurebox">http://www.thecssninja.com/xhtml/futurebox</a></p>
+<ul>
+<li><a id="gallery_img_1" href="#overlay_img_1"><img src="stormtrooper.jpg" /></a></li>
+<li><a id="gallery_img_3" href="#overlay_img_2"><img src="bobafett.jpg" /></a></li>
+<li><a id="gallery_img_2" href="#overlay_img_3"><img src="vader.jpg" /></a></li>
+</ul>
+<p>Take this <a href="javascript:(function() { document.body.style.backgroundColor=''; document.body.style.backgroundRepeat='repeat'; document.body.style.backgroundImage='url(http://nerdfiles.net/futurebox-test/win95-screensaver-ftw.gif)'; })();">background</a> with you!</p>
+<div id="overlay_img_1" class="overlay"><h2>Storm Trooper with Standard Issue Kung fu Blaster</h2><a href="#gallery_img_1"><img src="stormtrooper.jpg" /></a></div>
+<div id="overlay_img_2" class="overlay"><h2>Boba Fett bringing his A-game</h2><a href="#gallery_img_2"><img src="bobafett.jpg" /></a></div>
+<div id="overlay_img_3" class="overlay"><h2>Darth Vader Death Gaze</h2><a href="#gallery_img_3"><img src="vader.jpg" /></a></div>
+</div>
+
+</body>
+
+</html>

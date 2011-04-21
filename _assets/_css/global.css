@@ -6,47 +6,65 @@
  
 body { 
 	background: #000 url(../_img-ui/win95-screensaver-ftw.gif); 
-	font: 1em Helvetica, Arial, sans-serif; 
+	font: 0.75em/1.5 Helvetica, Arial, sans-serif; 
 	color: #FFEF3F; }
+h1,h2,h3,h4,h5,h6 { margin: .3em 0; }
 
 a { color: #CBC2AC; }
 
 a:hover { color: #FFEF3F; }
 
-ul { 
-	overflow: hidden; 
-	list-style: none; }
+.wrapper { margin: 0 auto; width: 960px; outline: 1px red solid; }
+	
+/* New form idea */
 
-ul li { float: left; }
+.single-column-form dd { margin: 0; }
+.single-column-form fieldset { border: none; padding: 0; margin: 0; }
+.single-column-form .controls ul { padding: 0; }
+.single-column-form .controls li { display: inline; }
 
-ul li img { 
-	width: 150px; 
-	border: 3px #666 solid; 
-	margin: 0 1em 0 0; }
+/* Frame */
+
+html.modal-visible { }
 
 .modal-overlay { 
+    top: 0;
+    left: 0;
+    background: orange;
+    display: none;
+    position: absolute; 
+    height: 100%; 
+    width: 100%;
+    opacity: .6; }
+.modal-frame { 
 	background: #000 url(../_img-ui/win95-screensaver-ftw.gif); 
 	display: none; 
 	position: absolute; 
-	top: 0; 
-	left: 0; 
-	height: 100%; 
-	width: 100%; }
+	top: 15%; /* By default */
+	left: 50%;  
+	width: auto;
+	box-shadow: 0 0 1em #333;
+	outline: 1px red solid; }
+.modal-frame-inner { }
+.modal-frame-title { padding: 1em; background: #333; color: #fff; }
+.modal-frame-title h2,h3,h4,h5,h6 { font-size: 12px; }
+.modal-frame-content { padding: 1em; outline: 1px red solid; }
 
-.modal-overlay a { 
-	display: table-cell; 
-	vertical-align: middle; 
-	text-align: center;
-	height: 100%;
-	width: 100%;
-	outline: none;
-	border: none; }
+.columns-3 { width: 460px; display: inline; float: left; margin-left: 10px; }
 
-.modal-overlay img {
-	height: 400px;
-	border: 3px #999 solid; }
+.modal-frame.columns-3 { 
+    left: 540px; /* should be relative to columns or max-columns; */
+    position: relative; 
+    display: none; 
+    margin-left: -230px; /* for absolute center? */
+    float: none; }
 
 /*
-.overlay:target { 
-	display: table; }
+ * Old method
+ *
+ * @see             main.js
+ */
+ 
+/*
+.modal-frame:target { display: table; }
 */

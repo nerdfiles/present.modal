@@ -5,22 +5,66 @@
 <head>
 <meta charset="utf-8" />
 <title>The Dark Side in a pure CSS Lightbox</title>
-<link href="_assets/_css/global.css" type="text/css" media="all" rel="global stylesheet" />
+<link href="_assets/_css/reset.css" type="text/css" media="all" rel="stylesheet reset" />
+<link href="_assets/_css/global.css" type="text/css" media="all" rel="stylesheet global" />
 </head>
 
 <body>
 
 <div class="wrapper">
+
+<div id="content">
 <h1>present.modal: A CSS modal library</h1>
-<ul>
-<li><a class="modal-open" id="gallery_img_1" href="#overlay_img_1"><img src="_assets/_img/stormtrooper.jpg" /></a></li>
-<li><a class="modal-open" id="gallery_img_3" href="#overlay_img_2"><img src="_assets/_img/bobafett.jpg" /></a></li>
-<li><a class="modal-open" id="gallery_img_2" href="#overlay_img_3"><img src="_assets/_img/vader.jpg" /></a></li>
-</ul>
-<div id="overlay_img_1" class="modal-overlay"><h2>Storm Trooper with Standard Issue Kung fu Blaster</h2><a href="#gallery_img_1"><img src="_assets/_img/stormtrooper.jpg" /></a></div>
-<div id="overlay_img_2" class="modal-overlay"><h2>Boba Fett bringing his A-game</h2><a href="#gallery_img_2"><img src="_assets/_img/bobafett.jpg" /></a></div>
-<div id="overlay_img_3" class="modal-overlay"><h2>Darth Vader Death Gaze</h2><a href="#gallery_img_3"><img src="_assets/_img/vader.jpg" /></a></div>
+<a class="modal-open" id="gallery_img_1" href="#overlay_img_1"><img width="150" src="_assets/_img/stormtrooper.jpg" /></a></li>
 </div>
+
+<div id="overlay_img_1" class="modal-frame columns-3">
+    <div class="modal-frame-inner">
+        <div class="modal-frame-title">
+            <h2>Modal Overlay Title</h2>
+        </div>
+        <div class="modal-frame-content">
+            <h3>Modal Overlay Small</h3>
+            <p>I'm just a modal window!</p>
+            <h3>Personal information form</h3>
+            <form id="test-form" name="test-form" action="." method="post" class="single-column-form">
+                <fieldset class="inputs">
+                    <div class="inner">
+                        <legend>Personal information</legend>
+                        <dl>
+                            <dt>
+                                <label for="">What's your name?</label>
+                            </dt>
+                            <dd>
+                                <input type="text" id="first-name" name="" value="" placeholder="First name" />
+                            </dd>
+                            <dd>
+                                <input type="text" id="last-name" name="" value="" placeholder="And surname, please" />
+                            </dd>
+                            <dt>
+                                <label for="">What's your occupation?</label>
+                            </dt>
+                            <dd>
+                                <input type="text" id="occupation" name="" value="" placeholder="All aboard!" />
+                            </dd>
+                        </dl>
+                    </div>
+                </fieldset>
+                <fieldset class="controls">
+                    <legend>Form submission</legend>
+                    <div class="inner">
+                        <ul>
+                            <li><input type="submit" value="Hello" name="primary-submit" /></li>
+                            <li><input type="reset" value="Clear" name="primary-reset" /></li>
+                        </ul>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div><!-- .wrapper -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script src="_assets/_js/main.js"></script>

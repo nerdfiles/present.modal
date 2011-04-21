@@ -6,6 +6,8 @@
  
 jQuery(function($) {
 
-    // ...
+    $('a').bind('click', function(e) {
+        e.preventDefault();
+    });
 
 });

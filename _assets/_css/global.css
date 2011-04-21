@@ -24,7 +24,7 @@ ul li img {
 	border: 3px #666 solid; 
 	margin: 0 1em 0 0; }
 
-.overlay { 
+.modal-overlay { 
 	background: #000 url(../_img-ui/win95-screensaver-ftw.gif); 
 	display: none; 
 	position: absolute; 
@@ -33,7 +33,7 @@ ul li img {
 	height: 100%; 
 	width: 100%; }
 
-.overlay a { 
+.modal-overlay a { 
 	display: table-cell; 
 	vertical-align: middle; 
 	text-align: center;
@@ -42,9 +42,11 @@ ul li img {
 	outline: none;
 	border: none; }
 
-.overlay img {
+.modal-overlay img {
 	height: 400px;
 	border: 3px #999 solid; }
 
+/*
 .overlay:target { 
 	display: table; }
+*/

@@ -1,3 +1,14 @@
 /**
  * present.modal
+ *
+ * The basic idea assumes accessibility, but is an effort to practice it under a hunch about the
+ * behavior of assistive technology parsers as far as anchor elements go. Additional, a practical 
+ * breakdown of what "JavaScript disabled" is played upon.
+ *
+ * @author          nerdfiles
+ * @date            04/20/2011 7:54 PM (Happy 420!)
+ * @lastmodified    04/20/2011 7:54 PM
+ * @version         0.0.1
+ * @project         present.modal
+ * @package         core
  */

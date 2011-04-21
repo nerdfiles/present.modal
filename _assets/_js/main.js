@@ -5,10 +5,11 @@
  */
  
 jQuery(function($) {
-
-    $('legend').hide();
     
     $('html').removeClass('no-js').addClass('js-enabled');
+    
+    // Do this in CSS
+    // $('legend').hide();
 
     /**
      * modal overlay

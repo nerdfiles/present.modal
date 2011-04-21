@@ -29,9 +29,19 @@ a:active { }
 .single-column-form .controls ul { padding: 0; margin: 0; }
 .single-column-form .controls li { display: inline; }
 
-/* Frame */
-
+/**
+ * Frame 
+ *
+ * What's in this library and what's just good practice?
+ */
+ 
 html.modal-visible { }
+html.no-js { }
+html.js-enabled { }
+
+html.js-enabled legend { display: none; }
+html.js-enabled .modal-overlay { display: none; }
+
 .columns-6 { width: 340px; display: inline; float: left; margin-left: 10px; }
 .columns-8 { width: 460px; display: inline; float: left; margin-left: 10px; }
 
@@ -39,7 +49,6 @@ html.modal-visible { }
     top: 0;
     left: 0;
     background: #222;
-    display: none;
     position: absolute; 
     height: 100%; 
     width: 100%; }

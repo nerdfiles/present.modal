@@ -4,9 +4,7 @@
  * @deps            jquery
  */
 
-script.ready('jquery', function() {
-
-alert(jQuery);
+//script.ready('jquery', function() {
 
     jQuery(function($) {
         
@@ -147,4 +145,4 @@ alert(jQuery);
     
     }); // jQuery
 
-}); // script
+//}); // script

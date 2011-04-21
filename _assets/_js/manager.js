@@ -1,3 +1,5 @@
+// doesn't work in IE...
+
 var script = $script.noConflict();
 
 /**
@@ -12,11 +14,7 @@ var script = $script.noConflict();
  * @dep             jquery
  */
 
-script([
-    
-    'https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'
-    
-], 'jquery');
+script(['https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'], 'jquery');
 
 /**
  * main.js

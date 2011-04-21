@@ -14,4 +14,9 @@
  * @version         0.0.1
  * @project         present.modal
  * @package         core
+ *
+ * @todo            Lots of clean up; 
+ *                  flesh out even-column'd modals; 
+ *                  set up non-grid-modals; 
+ *                  integrate with gdgs.
  */

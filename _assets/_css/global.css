@@ -15,7 +15,8 @@ a:visited { }
 a:hover { }
 a:active { }
 
-.wrapper { margin: 0 auto; width: 960px; }
+.wrapper { outline: 1px red solid; margin: 0 auto; width: 960px; }
+.originize { position: relative; }
 
 /* #content */
 
@@ -37,7 +38,7 @@ html.modal-visible { }
 .modal-overlay { 
     top: 0;
     left: 0;
-    background: #000;
+    background: #fff;
     display: none;
     position: absolute; 
     height: 100%; 
@@ -55,20 +56,18 @@ html.modal-visible { }
 .modal-frame-inner { }
 .modal-frame-title { padding: 1em; background: #333; color: #fff; }
 .modal-frame-title h2,h3,h4,h5,h6 { font-size: 12px; }
-.modal-frame-content { padding: 1em; /* By default no grid */ }
+.modal-frame-content { padding: 10px; /* By default no grid */ }
 
 /* absolute is tricky */
 
 .modal-frame.columns-6 { 
-    left: 36.1%;
+    left: 300px;
     width: 360px;
-    left: 35.4%; /* where it starts, so alpha and omega work naturally  */
     /*margin-left: -230px;*/ /* for absolute center? */ }
 
 .modal-frame.columns-8 { 
-    left: 31.2%;
+    left: 240px;
     width: 480px;
-    left: 30.3%;
     /*margin-left: -230px;*/ /* for absolute center? */ }
 
 /*

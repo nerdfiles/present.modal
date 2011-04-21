@@ -25,16 +25,16 @@ jQuery(function($) {
             
             var id = $(this).attr('href').match(/#(.*)/)[1];
             
-            $( 'div#' + id ).before('<div class="modal-overlay"></div>');
+            $( 'div#' + id ).parent().before('<div class="modal-overlay"></div>');
             
             $( 'div#' + id ).addClass('active-modal-frame');
-            $( 'div#' + id ).prev().addClass('active-modal-overlay');
+            $( 'div#' + id ).parent().prev().addClass('active-modal-overlay');
             
             if ( !$( 'div#' + id ).find('.controls .modal-cancel').length ) {
                 $( 'div#' + id ).find('.controls ul').append('<li><input type="button" class="button modal-cancel" name="modal-cancel" value="Cancel" /></li>');
             }
             
-            $( 'div#' + id ).prev().fadeIn();
+            $( 'div#' + id ).parent().prev().fadeIn();
             
             $( 'div#' + id ).hide();
             

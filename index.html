@@ -127,13 +127,45 @@
 
 </div>
 
-<script type="text/javascript" src="_assets/_js-lib/$script.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="_assets/_js/main.js"></script>
+
+<!--
+
+None of this works in IE.
+
+<script type="text/javascript" src="_assets/_js-lib/script.js"></script>
 <script type="text/javascript">
-var script = $script;
-script('_assets/_js-lib/jquery/1.5.2/jquery.min.js', function(jQuery) {
-});
-script('_assets/_js/main.js');
+var script = $script.noConflict();
 </script>
+<script type="text/javascript">
+
+// None of this works in IE
+
+/**
+ * Breaks absolute path links and sets no .ext requirement
+ */
+ 
+//script.path = '_assets/';
+
+/**
+ * jQuery
+ *
+ * @dep             jquery
+ */
+
+//script(['https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'], 'jquery');
+    
+/**
+ * main.js
+ *
+ * @deps            jquery
+ */
+ 
+//script('_assets/_js/main.js');
+
+</script>
+-->
 
 </body>
 

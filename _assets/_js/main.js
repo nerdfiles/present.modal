@@ -34,7 +34,9 @@ jQuery(function($) {
                 $( 'div#' + id ).find('.controls ul').append('<li><input type="button" class="button modal-cancel" name="modal-cancel" value="Cancel" /></li>');
             }
             
-            $( 'div#' + id ).parent().prev().fadeIn();
+            $( 'div#' + id ).parent().prev().css({
+                opacity: .7
+            }).fadeIn(300);
             
             $( 'div#' + id ).hide();
             

@@ -16,7 +16,7 @@ a:hover { }
 a:active { }
 
 .wrapper { outline: 1px red solid; margin: 0 auto; width: 960px; }
-.originize { position: relative; }
+.modal-originize { outline: none; position: absolute; top: 15%; left: 50%; margin-left: -480px; }
 
 /* #content */
 
@@ -38,17 +38,15 @@ html.modal-visible { }
 .modal-overlay { 
     top: 0;
     left: 0;
-    background: #fff;
+    background: #222;
     display: none;
     position: absolute; 
     height: 100%; 
-    width: 100%;
-    opacity: .7; }
+    width: 100%; }
 .modal-frame { 
     border: 1px #222 solid;
 	background: #fff;
 	position: absolute; 
-	top: 15%; /* By default */ 
 	box-shadow: 0 0 1em #333;
     display: inline-block;
     margin-left: -9999px;

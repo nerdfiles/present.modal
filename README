@@ -18,7 +18,8 @@
  * @todo            Lots of clean up; 
  *                  flesh out even-column'd modals; 
  *                  set up non-grid-modals; 
- *                  integrate with gdgs.
+ *                  integrate with gdgs;
+ *                  consider internal anchor "back"
  *
  * @tested          ie7,ie8,chrome,ff3.x,ff4.x
  */

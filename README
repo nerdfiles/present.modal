@@ -19,4 +19,6 @@
  *                  flesh out even-column'd modals; 
  *                  set up non-grid-modals; 
  *                  integrate with gdgs.
+ *
+ * @tested          ie7,ie8,chrome
  */

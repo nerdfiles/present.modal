@@ -6,6 +6,8 @@
 
 script.ready('jquery', function() {
 
+alert(jQuery);
+
     jQuery(function($) {
         
         $('html').removeClass('no-js').addClass('js-enabled');

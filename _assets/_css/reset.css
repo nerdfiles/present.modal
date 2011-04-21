@@ -266,7 +266,7 @@ body, select, input, textarea {
   /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
   color: #222;
   /* Set your base font here, to apply evenly */
-  font-family: Georgia, serif;
+  font-family: sans-serif;
 }
 
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */

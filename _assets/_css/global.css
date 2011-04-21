@@ -5,59 +5,71 @@
  */
  
 body { 
-	background: #000 url(../_img-ui/win95-screensaver-ftw.gif); 
-	font: 0.75em/1.5 Helvetica, Arial, sans-serif; 
-	color: #FFEF3F; }
+	background: #000 url(../_img-ui/win95-screensaver-ftw.gif);
+	background: #000;
+	font: 0.75em/1.5 Helvetica, Arial, sans-serif; }
 h1,h2,h3,h4,h5,h6 { margin: .3em 0; }
 
-a { color: #CBC2AC; }
+a,a:link { }
+a:visited { }
+a:hover { }
+a:active { }
 
-a:hover { color: #FFEF3F; }
+.wrapper { margin: 0 auto; width: 960px; }
 
-.wrapper { margin: 0 auto; width: 960px; outline: 1px red solid; }
+/* #content */
+
+#content { color: #FFEF3F; }
 	
 /* New form idea */
 
 .single-column-form dd { margin: 0; }
 .single-column-form fieldset { border: none; padding: 0; margin: 0; }
-.single-column-form .controls ul { padding: 0; }
+.single-column-form .controls ul { padding: 0; margin: 0; }
 .single-column-form .controls li { display: inline; }
 
 /* Frame */
 
 html.modal-visible { }
+.columns-6 { width: 340px; display: inline; float: left; margin-left: 10px; }
+.columns-8 { width: 460px; display: inline; float: left; margin-left: 10px; }
 
 .modal-overlay { 
     top: 0;
     left: 0;
-    background: orange;
+    background: #000;
     display: none;
     position: absolute; 
     height: 100%; 
     width: 100%;
-    opacity: .6; }
+    opacity: .7; }
 .modal-frame { 
-	background: #000 url(../_img-ui/win95-screensaver-ftw.gif); 
-	display: none; 
+    border: 1px #222 solid;
+	background: #fff;
 	position: absolute; 
-	top: 15%; /* By default */
-	left: 50%;  
-	width: auto;
+	top: 15%; /* By default */ 
 	box-shadow: 0 0 1em #333;
-	outline: 1px red solid; }
+    display: inline-block;
+    margin-left: -9999px;
+    float: none; }
 .modal-frame-inner { }
 .modal-frame-title { padding: 1em; background: #333; color: #fff; }
 .modal-frame-title h2,h3,h4,h5,h6 { font-size: 12px; }
-.modal-frame-content { padding: 1em; outline: 1px red solid; }
+.modal-frame-content { padding: 1em; /* By default no grid */ }
 
-.columns-3 { width: 460px; display: inline; float: left; margin-left: 10px; }
+/* absolute is tricky */
 
-.modal-frame.columns-3 { 
-    left: 540px; /* should be relative to columns or max-columns; */
-    position: relative; 
-    display: none; 
-    margin-left: -230px; /* for absolute center? */
-    float: none; }
+.modal-frame.columns-6 { 
+    left: 36.1%;
+    width: 360px;
+    left: 35.4%; /* where it starts, so alpha and omega work naturally  */
+    /*margin-left: -230px;*/ /* for absolute center? */ }
+
+.modal-frame.columns-8 { 
+    left: 31.2%;
+    width: 480px;
+    left: 30.3%;
+    /*margin-left: -230px;*/ /* for absolute center? */ }
 
 /*
  * Old method

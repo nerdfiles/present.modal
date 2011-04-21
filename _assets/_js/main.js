@@ -1,7 +1,7 @@
 /**
  * main.js for present.modal
  *
- * ...
+ * @deps            jquery
  */
 
 script.ready('jquery', function() {

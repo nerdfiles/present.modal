@@ -7,6 +7,8 @@
 jQuery(function($) {
 
     $('legend').hide();
+    
+    $('html').removeClass('no-js').addClass('js-enabled');
 
     /**
      * modal overlay

@@ -20,5 +20,5 @@
  *                  set up non-grid-modals; 
  *                  integrate with gdgs.
  *
- * @tested          ie7,ie8,chrome
+ * @tested          ie7,ie8,chrome,ff3.x,ff4.x
  */

@@ -25,46 +25,83 @@ jQuery(function($) {
     
         $self.bind('click', function(e) {
             
-            var id = $(this).attr('href').match(/#(.*)/)[1];
+            var id = $(this).attr('href').match(/#(.*)/)[1],
+                $ModalFrame = $( 'div#' + id ),
+                $ModalOverlay,
+                $ModalContainer = $ModalFrame.parent();
             
-            $( 'div#' + id ).parent().before('<div class="modal-overlay"></div>');
+            // Create overlay
             
-            $( 'div#' + id ).addClass('active-modal-frame');
-            $( 'div#' + id ).parent().prev().addClass('active-modal-overlay');
+            $ModalContainer.before('<div class="modal-overlay"></div>');
             
-            if ( !$( 'div#' + id ).find('.controls .modal-cancel').length ) {
-                $( 'div#' + id ).find('.controls ul').append('<li><input type="button" class="button modal-cancel" name="modal-cancel" value="Cancel" /></li>');
+            // Set $ModalOverlay for jQuery
+            
+            $ModalOverlay = $ModalContainer.prev();
+            
+            // Set activate modal window and overlay. We remove() our overlays
+            
+            $ModalFrame.addClass('active-modal-frame');
+            $ModalOverlay.addClass('active-modal-overlay');
+            
+            // Check for cancel button; if we don't find, let's create!
+            
+            if ( !$ModalFrame.find('.controls .modal-cancel').length ) {
+            
+                $ModalFrame.find('.controls ul').append('<li><input type="button" class="button modal-cancel" name="modal-cancel" value="Cancel" /></li>');
+                
             }
             
-            $( 'div#' + id ).parent().prev().css({
+            // Present overlay
+            
+            $ModalOverlay.css({
+            
                 opacity: .7
+                
             }).fadeIn(300);
             
-            $( 'div#' + id ).hide();
+            // Present frame
             
-            $( 'div#' + id ).css({
+            $ModalFrame.hide().css({
                 marginLeft: '0'
-            });
-            
-            $( 'div#' + id ).animate({
+            }).animate({
                 'opacity': 'show'
             }, 500);
+
+            // Inform DOM
             
             $('html').addClass('modal-visible');
             
+            // Set oldform for "Cancel"
+            
             var oldform = $('.active-modal-frame').find('form').clone();
-            $( 'div#' + id ).data('oldform', oldform);
+            $ModalFrame.data('oldform', oldform);
+            
+            // Key: Cancel default anchor behavior; if JS disabled, the internal anchor rules
             
             e.preventDefault();
         }); 
     
     });
     
-    $('.controls a.modal-cancel').live('click', function(e) {
+    
+    /**
+     * Why put a form "up" there? Hey, why not? Anyway.
+     * This is for canceling with anchors.
+     */
+     
+    $('.controls a.modal-cancel,.modal-frame-title a.modal-cancel').live('click', function(e) {
         
+        // ...
+                
     });
     
+    /**
+     * Not sure why I want to control this thing's presentation with JavaScript;
+     * but I'll make it all optional anyhow.
+     */
+    
     $('.controls input.modal-cancel').live('click', function(e) {
+    
         var $self = $(this),
             placeElem = $('.active-modal-frame').find('form').prev();
             
@@ -78,16 +115,27 @@ jQuery(function($) {
         $('.active-modal-overlay').fadeOut(300, function() {
             $(this).remove();
         });
+        
     });
     
-    // modal overlay
+    /**
+     * modal frame in an anchor
+     *
+     * Well well, if the entire thing is wrapped in a billboard anchor,
+     * then should the billboard anchor point back to the triggering anchor?
+     * What does the screen reader say?
+     */
     
     $('a.modal-frame').each(function() {
     
         var $self = $(this);
     
         $self.bind('click', function(e) {
+        
+            // JavaScript disabled, all billboards have addresses
+            // Internal Anchor Pong
             e.preventDefault();
+            
         });
     
     });
